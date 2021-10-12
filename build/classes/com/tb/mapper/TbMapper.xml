@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tb.mapper.TbMapper">
+	<insert id="send_tb" parameterType="tbTw">
+		insert into
+		tbtw(user_name,tw_title,tw_article,tw_img,tw_sort,tw_time)
+		values(#{user_name},#{tw_title},#{tw_article},#{tw_img},#{tw_sort},#{tw_time})
+	</insert>
+
+	<select id="showSortTw" parameterType="String" resultType="tbTw">
+		select * from tbtw where tw_sort = #{tw_sort} order by tw_time desc
+	</select>
+	
+	<select id="showAllTw" resultType="tbTw">
+		select * from tbtw
+	</select>
+	
+	<select id="showDetailTw" parameterType="int" resultType="tbTw">
+		select
+		* from tbtw where tw_id = #{tw_id}
+	</select>
+
+	<delete id="delTbTw" parameterType="int">
+		delete from tbtw where tw_id
+		= #{tw_id}
+	</delete>
+
+	<insert id="doComment" parameterType="tbComment">
+		insert into
+		tbcomment(tw_id,incomment_id,user_name,comment_context,comment_time)
+		values(#{tw_id},#{incomment_id},#{user_name},#{comment_context},#{comment_time})
+	</insert>
+
+	<select id="show_allComment" parameterType="Map" resultType="tbComment">
+		select
+		* from tbcomment where tw_id = #{tw_id} and
+		incomment_id =
+		#{incomment_id} order by comment_time desc
+	</select>
+	
+	<delete id="delComment" parameterType="int">
+		delete from tbcomment where comment_id = #{comment_id} || incomment_id = #{comment_id}
+	</delete>
+	
+
+</mapper>

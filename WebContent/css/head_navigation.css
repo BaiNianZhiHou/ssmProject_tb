@@ -1,0 +1,50 @@
+.container {
+	margin-top:30px;
+}
+
+#logo {
+	width: 300px;
+	margin-top:20px;
+}
+#head #logo img {
+	max-height: 50px;
+}
+ #doSearch {
+	width: 840px;
+	height:50px;
+	margin-top: -55px;
+	margin-left: 320px;
+}
+#doSearch .form-control {
+	height: 45px;
+	width:470px;
+}
+#doSearch .btn{
+	margin-top: -70px;
+	margin-left: 520px;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+#head #doSearch .btn-inverse {
+	margin-top: -114px;
+	margin-left: 620px;
+	background-color: #000000;
+}
+#head #doSearch div {
+	width: 100px;
+	margin-top: -76px;
+	margin-left: 750px;
+}
+#advanced a {
+	color: #000000;
+}
+#login {
+	margin-left: 1170px;
+	margin-top: -45px;
+}
+#login a {
+	color: #000000;
+}
+#register {
+	margin-left: 480px;
+}

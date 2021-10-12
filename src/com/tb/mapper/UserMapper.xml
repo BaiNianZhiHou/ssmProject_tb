@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.tb.mapper.UserMapper">
+	<select id="loginAuthentication" parameterType="tbUser"
+		resultType="tbUser">
+		select * from tbuser where user_name = #{user_name} and
+		user_pwd = #{user_pwd}
+	</select>
+
+	<insert id="doRegister" parameterType="tbUser">
+		insert into
+		tbuser(user_name,user_pwd,user_sex)
+		values(#{user_name},#{user_pwd},#{user_sex})
+	</insert>
+
+	<update id="updPerson" parameterType="map">
+		update tbuser set
+		user_name
+		= #{user_name},user_pwd =
+		#{user_pwd},user_sex =
+		#{user_sex}
+		where
+		user_name = #{loginUser}
+	</update>
+
+	<select id="ifExistByUserName" parameterType="String"
+		resultType="int">
+		select count(*) from
+		tbuser where user_name =
+		#{user_name}
+	</select>
+
+	<select id="searchAllUser" resultType="tbUser">
+		select * from tbuser
+	</select>
+
+	<select id="findUserNameById" parameterType="int" resultType="tbUser">
+		select * from tbUser where user_id = #{user_id}
+	</select>
+
+	<select id="get_my_tw" parameterType="String" resultType="tbTw">
+		select
+		* from tbtw where user_name = #{user_name} order by tw_time desc
+	</select>
+
+	<select id="isAttention" parameterType="tbuserattention" resultType="tbuserattention">
+		select *
+		from tbuserattention where user1_name = #{user1_name} and user2_name =
+		#{user2_name} 
+	</select>
+
+	<insert id="doAttention" parameterType="tbuserattention" useGeneratedKeys="true">
+		insert into
+		tbuserattention(user1_name,user2_name)
+		values(#{user1_name},#{user2_name})
+
+		<selectKey resultType="java.lang.Integer" order="AFTER"
+			keyProperty="attention_id">
+			SELECT LAST_INSERT_ID() AS attention_id
+		</selectKey>
+	</insert>
+
+	<delete id="cancelAttention" parameterType="tbuserattention">
+		delete from
+		tbuserattention where user1_name = #{user1_name} and user2_name =
+		#{user2_name}
+	</delete>
+
+	<select id="gainMyAttentionsOrFans" parameterType="Map"
+		resultType="tbuserattention">
+		select * from tbuserattention where
+		<if test="choose==1"><!-- 如果为1 则是查找我关注的人 -->
+			user1_name = #{user_name}
+		</if>
+		<if test="choose==2"><!-- 如果为2 则是查找我的粉丝 -->
+			user2_name = #{user_name}
+		</if>
+	</select>
+
+	<select id="getComment_id" parameterType="String" resultType="Integer">
+		select comment_id from tbcomment where user_name = #{user_name} order
+		by
+		comment_time desc
+	</select>
+
+	<insert id="existMsg" parameterType="Map">
+		insert into
+		tbmsg(user1_name,user2_name,msg_contain)
+		values(#{user1_name},#{user2_name},#{msg_contain})
+	</insert>
+
+	<select id="getAllMsg" parameterType="String" resultType="tbmsg">
+		select
+		*
+		from tbmsg where user2_name = #{value} order
+		by
+		tb_msg desc
+	</select>
+
+	<delete id="delMsg" parameterType="int">
+		delete from
+		tbmsg where tb_msg
+		= #{value}
+	</delete>
+
+</mapper>

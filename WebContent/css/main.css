@@ -1,0 +1,269 @@
+html {
+	height: 100%;
+}
+body {
+	/*height:  800px;*/
+	background-color:#FCFAF2;
+	/*background: linear-gradient(to bottom,#FFFFFF,#FCFAF2);*/
+}
+.container {
+	height: 3000px;
+}
+#head {
+	margin-top:20px;
+}
+#head #logo {
+	width: 300px;
+}
+#head #logo img {
+	max-height: 50px;
+}
+#head #doSearch {
+	width: 500px;
+	margin-top: -50px;
+	margin-left: 320px;
+}
+#head #doSearch .form-control {
+	height: 45px;
+}
+#head #doSearch .btn {
+	margin-top: -40px;
+	margin-left: 520px;
+	color: #FFFFFF;
+	background-color: #000000;
+}
+#head #doSearch .btn-inverse {
+	margin-top: -40px;
+	margin-left: 620px;
+	background-color: #000000;
+}
+#head #doSearch div {
+	width: 100px;
+	margin-top: -30px;
+	margin-left: 750px;
+}
+#head #doSearch div a {
+	color: #000000;
+}
+#first {
+	margin-top: 40px;
+	height: 613px;
+}
+#second {
+	width: 270px;
+}
+#personal {
+	height: 40px;
+	margin-top: -220px;
+	margin-left: 150px;
+	/*border: double;*/
+}
+#personal_one,#send_t_one,#exit_one{
+	width:90px;
+	height: 40px;
+}
+#send_t {
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 150px;
+}
+#exit {
+	margin-left: 150px;
+	margin-top: 10px;
+}
+#second .list-group-item div a {
+	color: #FFFFFF;
+}
+#second .list-group-item {
+	height: 180px;
+}
+#tb_img1 {
+	padding-top: 20px;
+	min-height: 140px;
+}
+#second_one .list-group-item {
+	height: 240px;
+}
+#second_two {
+	margin-top: 18px;
+	/*border: double;*/
+}
+#show_sum_tb {
+	margin-top: 10px;
+}
+#show_sum_tb_one .list-group-item {
+	background-color: #FEDFE1;
+}
+#mine_msg #show_sum_tb_one {
+	margin-top: -20px;
+}
+#total_img {
+	height: 100px;
+	/*border: double;*/
+} 
+#total1 {
+	/*border: double;*/
+	width: 60px;
+	margin-top: 40px;
+}
+#tb_font {
+	/*border: double;*/
+	width: 110px;
+	margin-left: 60px;
+	margin-top: -20px;
+}
+#total2 {
+	/*border: double;*/
+	width: 60px;
+	margin-left: 190px;
+	margin-top: -30px;
+}
+#recommond_tbs {
+	width: 870px;
+	margin-left: 270px;
+	margin-top: -440px;
+}
+#recommond_tbs .list-group-item {
+	height: 600px;
+}
+#tj_tb1 {
+	/*border: double;*/
+	width: 280px;
+	height: 170px;
+	/*float: left;*/
+	border-right: 1px solid #DDDDDD;*/
+}
+#tj_tb1 #tj_tb {
+	width: 50px;
+	height: 20px;
+	/*padding: 5px;*/
+}
+#tj_tb1 #tj_bm {
+	/*padding-top: 10px;*/
+	padding-left: 80px;
+	margin-top: -20px;
+}
+#tj_bm a {
+	color: #000000;
+}
+#tj_bmms {
+	padding-top: 20px;
+	margin-left: 20px;
+	padding: 20px;
+}
+#tj_tb2 {
+	/*border: double;*/
+	width: 280px;
+	height: 170px;
+	margin-left: 280px;
+	margin-top: -170px;
+}
+#tj_tb2 #tj_bm1 {
+	margin-top: -20px;
+	padding-left: 80px;
+}
+#tj_bm1 a {
+	color: #000000;
+}
+#tj_tb3 {
+	width: 280px;
+	height: 170px;
+	/*border: double;*/
+	margin-left:560px ;
+	margin-top: -170px;
+	/*float: right;*/
+	border-left: 1px solid #DDDDDD;
+}
+#tj_tb3 #tj_bm2 {
+	margin-top: -20px;
+	padding-left: 80px;
+}
+#tj_bm2 a {
+	color: #000000;
+}
+#read_logo {
+	padding-left: 0;
+}
+#read_logo img {
+	padding: 20px;
+}
+#recommond2 {
+	height: 300px;
+}
+.item .carousel-caption h3 a {
+	color: #FFFFFF;
+}
+#third {
+	width: 270px;
+	margin-top: -200px;
+}
+#sort_tb ul li {
+	color: #8C8C8C;
+	font-size: 18px;
+}
+#sort_tb ul li a {
+	color: #8C8C8C;
+}
+#third .glyphicon {
+	color: #2AABD2;
+}
+
+#titlie a {
+	font-size: 5px;
+}
+#four_one {
+	margin-top: -20px;
+}
+#four_one1 .glyphicon {
+	color: red;
+}
+#four_one a {
+	color: #000000;
+}
+#four_two {
+	margin-top: -20px;
+}
+#four_two a {
+	color: #000000;
+}
+#hot_content a {
+	color: #8C8C8C;
+}
+#tb_entertainment {
+	min-width: 250px;
+}
+#show_contain_tb {
+	margin-left: 270px;
+	margin-top: -970px;
+	padding-top: 10px;
+	width: 590px;
+	background-color: #FFFFFF;
+}
+#show_contain_tb .glyphicon {
+	color: #8C8C8C;
+}
+#panel-789588 a,font {
+	color: #8C8C8C;
+}
+#panel-969420 a,font {
+	color: #8C8C8C;
+} 
+#fix {
+	/*border: double;*/
+	width: 280px;
+	height: 970px;
+	margin-top: -1394px;
+	margin-left: 860px;
+	}
+#hot_content .glyphicon {
+	color: red;
+}
+#pagination {
+	/*border: double;*/
+	width: 590px;
+	margin-left: 270px;
+}
+#five-one {
+	margin-top: -32px;
+}
+
